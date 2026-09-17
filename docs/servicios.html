@@ -3,59 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Salón de Belleza en La Puebla de Cazalla | Spa MC</title>
-<meta name="description" content="Spa MC, tu salón de belleza en La Puebla de Cazalla (Sevilla). Faciales, depilación, manicura, pedicura y keratina. Reserva tu cita hoy mismo." />
+<title>Servicios de Belleza en La Puebla de Cazalla | Spa MC</title>
+<meta name="description" content="Descubre los tratamientos de Spa MC en La Puebla de Cazalla: faciales, depilación, manicura, pedicura y keratina, con precios claros desde 7 €." />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Spa MC" />
-<!-- REVISAR: sustituir por la URL absoluta definitiva cuando la web esté desplegada -->
-<link rel="canonical" href="index.html" />
-<link rel="icon" href="../assets/logo.png" type="image/png" />
+<link rel="canonical" href="https://marutri.github.io/spa-mc-web/servicios.html" />
+<link rel="icon" href="assets/logo.png" type="image/png" />
 
-<meta property="og:title" content="Spa MC | Salón de Belleza en La Puebla de Cazalla" />
-<meta property="og:description" content="Faciales, depilación, manicura, pedicura y keratina en un ambiente de relax. Descubre Spa MC en La Puebla de Cazalla." />
+<meta property="og:title" content="Servicios de Belleza | Spa MC" />
+<meta property="og:description" content="Faciales, depilación, manicura, pedicura y keratina en Spa MC, La Puebla de Cazalla. Precios claros, sin sorpresas." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="index.html" />
-<meta property="og:image" content="../assets/hero-poster.jpg" />
+<meta property="og:url" content="https://marutri.github.io/spa-mc-web/servicios.html" />
+<meta property="og:image" content="assets/hero-poster.jpg" />
 <meta property="og:locale" content="es_ES" />
 <meta property="og:site_name" content="Spa MC" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Spa MC | Salón de Belleza en La Puebla de Cazalla" />
-<meta name="twitter:description" content="Faciales, depilación, manicura, pedicura y keratina en un ambiente de relax en La Puebla de Cazalla." />
-<meta name="twitter:image" content="../assets/hero-poster.jpg" />
+<meta name="twitter:title" content="Servicios de Belleza | Spa MC" />
+<meta name="twitter:description" content="Faciales, depilación, manicura, pedicura y keratina en Spa MC, La Puebla de Cazalla." />
+<meta name="twitter:image" content="assets/hero-poster.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="../assets/hero-poster.jpg" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BeautySalon",
-  "name": "Spa MC",
-  "description": "Salón de belleza en La Puebla de Cazalla (Sevilla) con tratamientos faciales, depilación, manicura, pedicura y keratina.",
-  "url": "index.html",
-  "telephone": "+34667084509",
-  "email": "correomcspa@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Antonio Fuentes 19",
-    "addressLocality": "La Puebla de Cazalla",
-    "addressRegion": "Sevilla",
-    "postalCode": "41540",
-    "addressCountry": "ES"
-  },
-  "areaServed": ["La Puebla de Cazalla"],
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "14:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "16:30", "closes": "20:30" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:30", "closes": "14:00" }
-  ],
-  "priceRange": "7€ - 50€",
-  "image": "../assets/hero-poster.jpg",
-  "logo": "../assets/logo.png",
-  "sameAs": ["https://www.instagram.com/pueblaspa", "https://www.facebook.com/spa.mc.5"]
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://marutri.github.io/spa-mc-web/"},
+    {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://marutri.github.io/spa-mc-web/servicios.html"}
+  ]
 }
 </script>
 <style>
@@ -348,16 +327,17 @@ ul {
   transition: transform .25s ease, opacity .25s ease;
 }
 
-/* ---------- Hero con vídeo en bucle ida-vuelta (adelante / atrás) ---------- */
+/* ---------- Hero con vídeo controlado por scroll (skill scroll-video) ---------- */
 
 .scroll-video-hero {
-  height: 100vh;
+  height: 500vh;
   position: relative;
 }
 
 .scroll-video-sticky {
-  position: relative;
-  height: 100%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -436,6 +416,23 @@ ul {
   color: rgba(255, 255, 255, .75);
 }
 
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, .2);
+  z-index: 3;
+}
+
+.scroll-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-primary);
+  transition: width .05s linear;
+}
+
 .scroll-hint {
   position: absolute;
   left: 50%;
@@ -465,6 +462,21 @@ ul {
   40% { transform: scaleY(1); transform-origin: top; opacity: 1; }
   60% { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
   100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .scroll-video-hero {
+    height: 100vh;
+  }
+  .scroll-video-sticky {
+    position: relative;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-video-hero {
+    height: 100vh;
+  }
 }
 
 /* ---------- Page banner (páginas interiores) ---------- */
@@ -1233,7 +1245,7 @@ ul {
 <header class="site-header">
   <div class="container nav">
     <a href="index.html" class="brand">
-      <img src="../assets/logo.png" alt="Spa MC - Logo" />
+      <img src="assets/logo.png" alt="Spa MC - Logo" />
       <span class="brand-text">
         <strong>Spa MC</strong>
         <span>Salón de belleza</span>
@@ -1241,8 +1253,8 @@ ul {
     </a>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html" aria-current="page">Inicio</a>
-      <a href="servicios.html">Servicios</a>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html" aria-current="page">Servicios</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
     </nav>
@@ -1262,155 +1274,70 @@ ul {
 
 <main>
 
-  <!-- SCROLL-VIDEO-SECTION -->
-  <section class="scroll-video-hero" id="scroll-hero">
-    <div class="scroll-video-sticky">
-      <video
-        id="heroVideo"
-        src="../assets/hero.mp4"
-        poster="../assets/hero-poster.jpg"
-        playsinline
-        muted
-        preload="auto"
-      ></video>
-      <div class="hero-content">
-        <div class="container">
-          <span class="eyebrow">La Puebla de Cazalla · Sevilla</span>
-          <h1>Spa MC — Salón de Belleza en La Puebla de Cazalla</h1>
-          <p>Faciales, depilación, manicura, pedicura y keratina en un espacio pensado para que te relajes de verdad. Servicios de belleza totalmente personalizados, con años de experiencia detrás.</p>
-          <div class="hero-actions">
-            <a href="contacto.html" class="btn btn--primary">Solicitar presupuesto</a>
-            <a href="tel:+34667084509" class="btn btn--ghost">Llamar: 667 08 45 09</a>
-            <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
-          </div>
-          <div class="hero-meta">
-            <div>
-              <strong>Ma – Vi</strong>
-              <span>9:30–14:00 y 16:30–20:30</span>
-            </div>
-            <div>
-              <strong>Sábado</strong>
-              <span>9:30–14:00</span>
-            </div>
-            <div>
-              <strong>Av. Antonio Fuentes 19</strong>
-              <span>La Puebla de Cazalla, Sevilla</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="scroll-hint">Scroll</span>
+  <section class="page-banner">
+    <img src="assets/gallery/photo-08.jpg" alt="Servicios de belleza en Spa MC" />
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Inicio</a> / Servicios</p>
+      <h1>Nuestros Servicios de Belleza</h1>
+      <p>Tratamientos de belleza con precio cerrado, en La Puebla de Cazalla.</p>
     </div>
   </section>
 
-  <section class="section" id="por-que-elegirnos">
+  <section class="section" id="tratamientos-de-belleza">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Por qué elegirnos</span>
-        <h2>Un salón pensado para que te sientas como nueva</h2>
-        <p>Esto es lo que nos hace diferentes en La Puebla de Cazalla.</p>
+        <span class="eyebrow">Tratamientos de belleza</span>
+        <h2>Tanto si buscas una cera perfecta como si quieres mimarte con una manicura</h2>
+        <p>Cuenta con nosotros para tu tratamiento: una amplia gama de servicios de salón a precios claros, desde limpieza de cejas y depilación con cera hasta bronceado, manicura y pedicura.</p>
       </div>
-      <div class="grid grid--3">
-        <div class="card feature-card" data-reveal>
-          <div class="feature-icon">
-            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-3-8-6.5-8-10.5A5.5 5.5 0 0 1 9.5 5c1 0 2 .3 2.5 1 .5-.7 1.5-1 2.5-1A5.5 5.5 0 0 1 20 10.5C20 14.5 16.5 18 12 21z"></path></svg>
-          </div>
-          <h3>Mejor salón de la zona</h3>
-          <p>Nuestro objetivo es que salgas relajada. Nuestro equipo de esteticistas combina una visión moderna con años de experiencia para ofrecerte servicios de belleza de alto nivel, totalmente personalizados.</p>
-        </div>
-        <div class="card feature-card" data-reveal>
-          <div class="feature-icon">
-            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <h3>Atención al cliente</h3>
-          <p>Nos enorgullece cuidar de cada clienta con amabilidad y cercanía. Nuestros profesionales te explican cada tratamiento, sus precios y sus resultados antes de empezar.</p>
-        </div>
-        <div class="card feature-card" data-reveal>
-          <div class="feature-icon">
-            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-          </div>
-          <h3>Gama completa de servicios</h3>
-          <p>Desde una cera perfecta hasta una manicura de mimo: cuenta con nosotros para tu tratamiento, con una amplia gama de servicios de salón a precios claros.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section section--alt" id="servicios">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Servicios</span>
-        <h2>Tratamientos de belleza</h2>
-        <p>Estos son nuestros tratamientos más solicitados, con precio cerrado desde el primer momento.</p>
-      </div>
-      <div class="grid grid--3">
+      <div class="grid grid--2">
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-12.jpg" alt="Tratamiento facial de colágeno en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-12.jpg" alt="Colágeno facial - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Colágeno facial</h3><span class="price-tag">39,00 €</span></div>
-            <p>Tratamiento facial con colágeno para firmeza e hidratación de la piel.</p>
+            <p>Tratamiento facial con colágeno pensado para aportar firmeza e hidratación profunda a la piel del rostro, dejándola con un aspecto más terso y luminoso.</p>
           </div>
         </div>
+
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-11.jpg" alt="Facial de vitamina C en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-11.jpg" alt="Facial de vitamina C - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Facial de vitamina C</h3><span class="price-tag">39,00 €</span></div>
-            <p>Facial luminosidad con vitamina C para un tono de piel más uniforme.</p>
+            <p>Facial revitalizante con vitamina C que ayuda a unificar el tono de la piel y aportar luminosidad, ideal como impulso de energía para el rostro.</p>
           </div>
         </div>
+
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-01.jpg" alt="Mesoterapia facial en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-01.jpg" alt="Mesoterapia facial - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Mesoterapia facial</h3><span class="price-tag">50,00 €</span></div>
-            <p>Tratamiento facial especializado para revitalizar y nutrir la piel en profundidad.</p>
+            <p>Tratamiento facial especializado que nutre la piel en profundidad, indicado para quienes buscan un cuidado facial más intensivo.</p>
           </div>
         </div>
+
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-09.jpg" alt="Depilación en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-09.jpg" alt="Depilación - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Depilación</h3><span class="price-tag">15,00 €</span></div>
-            <p>Depilación con cera, cuidadosa y con resultados duraderos.</p>
+            <p>Depilación con cera realizada con mimo y cuidado, pensada para dejar la piel suave con resultados duraderos.</p>
           </div>
         </div>
+
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-03.jpg" alt="Manicura en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-03.jpg" alt="Manicura - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Manicura</h3><span class="price-tag">7,00 €</span></div>
-            <p>Manicura completa para unas manos cuidadas al detalle.</p>
+            <p>Manicura completa para cuidar tus manos y uñas al detalle, con un acabado impecable.</p>
           </div>
         </div>
+
         <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="../assets/gallery/photo-02.jpg" alt="Keratina, tratamiento capilar en Spa MC" loading="lazy" /></div>
+          <div class="card-media"><img src="assets/gallery/photo-02.jpg" alt="Keratina, tratamiento capilar - Spa MC" loading="lazy" /></div>
           <div class="card-body">
             <div class="card-top-row"><h3>Keratina Tratamiento Capilar</h3><span class="price-tag">30,00 €</span></div>
-            <p>Tratamiento capilar de keratina para un cabello más liso, brillante y sano.</p>
+            <p>Tratamiento capilar de keratina que deja el cabello más liso, brillante y manejable, reduciendo el encrespamiento.</p>
           </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:44px">
-        <a href="servicios.html" class="btn btn--outline">Ver todos los servicios</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="numeros">
-    <div class="container">
-      <div class="stat-bar" data-reveal>
-        <div class="stat-item">
-          <strong>6</strong>
-          <span>Tratamientos de belleza</span>
-        </div>
-        <div class="stat-item">
-          <strong>5 días</strong>
-          <span>Abiertos de martes a sábado</span>
-        </div>
-        <div class="stat-item">
-          <strong>100%</strong>
-          <span>Tratamientos personalizados</span>
-        </div>
-        <div class="stat-item">
-          <strong>1</strong>
-          <span>Salón en La Puebla de Cazalla</span>
         </div>
       </div>
     </div>
@@ -1419,18 +1346,14 @@ ul {
   <section class="section section--alt">
     <div class="container">
       <div class="split">
-        <div class="split-media" data-reveal>
-          <img src="../assets/gallery/photo-05.jpg" alt="Interior del salón de belleza Spa MC" />
-          <div class="badge-float">
-            <strong>Ma–Sá</strong>
-            <span>Abierto</span>
-          </div>
-        </div>
         <div class="split-copy" data-reveal>
-          <span class="eyebrow">Sobre nosotros</span>
-          <h2>Un equipo con años de experiencia cuidando de ti</h2>
-          <p>Somos muy afortunados de haber cuidado de tantas clientas satisfechas. Por eso podemos afirmar, con confianza, que nuestro equipo cuenta con años de experiencia ofreciendo el mejor servicio. Si aún no sabes qué tratamiento es el mejor para ti, te lo explicamos todo: precios, resultados y lo que necesites saber.</p>
-          <a href="nosotros.html" class="btn btn--primary">Conócenos</a>
+          <span class="eyebrow">Cómo reservar</span>
+          <h2>Pide tu cita en dos pasos</h2>
+          <p>Escríbenos desde el formulario de contacto contándonos qué tratamiento te interesa y te confirmaremos el día y la hora. Si aún no tienes claro qué tratamiento es el mejor para ti, nuestro equipo te lo explica todo: precios, resultados y lo que necesites saber.</p>
+          <a href="contacto.html" class="btn btn--primary">Ir a contacto</a>
+        </div>
+        <div class="split-media" data-reveal>
+          <img src="assets/gallery/photo-04.jpg" alt="Trato cercano en Spa MC" />
         </div>
       </div>
     </div>
@@ -1439,12 +1362,11 @@ ul {
   <section class="section">
     <div class="container">
       <div class="cta-band" data-reveal>
-        <img src="../assets/gallery/photo-06.jpg" alt="Ambiente relajado del salón Spa MC" />
-        <h2>¿Lista para tu momento de relax?</h2>
-        <p>Pide cita a través de nuestro formulario y te contactaremos lo antes posible.</p>
+        <img src="assets/gallery/photo-07.jpg" alt="Salón de belleza Spa MC" />
+        <h2>¿Empezamos con tu tratamiento?</h2>
+        <p>Cuéntanos qué necesitas y te contactaremos lo antes posible.</p>
         <div class="hero-actions">
           <a href="contacto.html" class="btn btn--primary">Solicitar presupuesto</a>
-          <a href="contacto.html" class="btn btn--ghost">Ver horario y ubicación</a>
         </div>
       </div>
     </div>
@@ -1457,7 +1379,7 @@ ul {
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="../assets/logo.png" alt="Spa MC - Logo" />
+          <img src="assets/logo.png" alt="Spa MC - Logo" />
           <strong>Spa MC</strong>
         </div>
         <p>Salón de belleza en La Puebla de Cazalla. Faciales, depilación, manicura, pedicura y keratina en un ambiente de relax.</p>
@@ -1554,59 +1476,6 @@ ul {
         el.classList.add('is-visible');
       });
     }
-  })();
-</script>
-
-<script>
-  (function () {
-    // Vídeo del hero en bucle ida-vuelta: avanza hasta el final y luego
-    // retrocede hasta el principio, repitiendo. No depende del scroll,
-    // así el scroll de la página queda siempre libre y fluido.
-    var video = document.getElementById('heroVideo');
-    if (!video) return;
-
-    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      video.pause();
-      video.currentTime = 0;
-      return;
-    }
-
-    video.pause();
-    video.currentTime = 0;
-
-    var isVideoReady = false;
-    var direction = 1;
-    var lastTs = null;
-
-    video.addEventListener('loadedmetadata', function () {
-      isVideoReady = true;
-    });
-    video.load();
-
-    function tick(ts) {
-      if (isVideoReady && video.duration) {
-        if (lastTs === null) lastTs = ts;
-        var dt = (ts - lastTs) / 1000;
-        lastTs = ts;
-
-        var next = video.currentTime + direction * dt;
-
-        if (next >= video.duration) {
-          next = video.duration;
-          direction = -1;
-        } else if (next <= 0) {
-          next = 0;
-          direction = 1;
-        }
-        video.currentTime = next;
-      } else {
-        lastTs = ts;
-      }
-      requestAnimationFrame(tick);
-    }
-
-    requestAnimationFrame(tick);
   })();
 </script>
 
