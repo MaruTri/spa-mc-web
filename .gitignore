@@ -1,0 +1,16 @@
+# El agente de WhatsApp (claves, sesión, dependencias) nunca debe subirse.
+BOT/
+
+# Por si acaso, patrones de seguridad a nivel de todo el repo
+.env
+.env.*
+!.env.example
+node_modules/
+auth/
+data/
+*.log
+*.pid
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
