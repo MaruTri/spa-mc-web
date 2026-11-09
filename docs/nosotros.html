@@ -1111,6 +1111,315 @@ ul {
   transform: translateY(0);
 }
 
+/* ---------- Spa infantil ---------- */
+
+:root {
+  --kids-rose: #b4466b;
+  --kids-pink: #e88aa6;
+  --kids-blush: #f9dbe4;
+  --kids-bg: #fdf3f6;
+  --kids-lilac: #f1e6f8;
+  --font-script: "Dancing Script", "Brush Script MT", cursive;
+}
+
+.kids-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 80px 0 90px;
+  background:
+    radial-gradient(circle at 15% 20%, var(--kids-lilac) 0, transparent 45%),
+    radial-gradient(circle at 85% 80%, var(--kids-blush) 0, transparent 50%),
+    var(--kids-bg);
+}
+
+.kids-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.kids-hero .breadcrumb,
+.kids-hero .breadcrumb a {
+  color: var(--color-ink-soft);
+}
+
+.kids-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin-bottom: .35em;
+}
+
+.kids-hero p {
+  max-width: 640px;
+  margin: 0 auto 30px;
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}
+
+.kids-hero .hero-actions {
+  justify-content: center;
+}
+
+.kids-script {
+  font-family: var(--font-script);
+  font-weight: 700;
+  color: var(--kids-rose);
+  font-size: 1.25em;
+}
+
+.kids-eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--kids-rose);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.kids-crown {
+  display: block;
+  width: 64px;
+  height: 44px;
+  margin: 18px auto 16px;
+  color: var(--kids-pink);
+}
+
+.kids-crown--small {
+  width: 48px;
+  height: 33px;
+  margin-top: 0;
+}
+
+.kids-deco {
+  position: absolute;
+  fill: var(--kids-pink);
+  opacity: .35;
+}
+
+.kids-deco--1 { width: 46px; top: 50px; left: 8%; transform: rotate(-12deg); }
+.kids-deco--2 { width: 40px; bottom: 50px; left: 16%; opacity: .25; }
+.kids-deco--3 { width: 34px; top: 80px; right: 12%; }
+.kids-deco--4 { width: 56px; bottom: 70px; right: 6%; opacity: .25; }
+
+.kids-btn {
+  background: var(--kids-rose);
+  color: var(--color-white);
+  box-shadow: 0 10px 26px rgba(180, 70, 107, .25);
+}
+
+.kids-btn:hover {
+  background: #9c3a5b;
+  transform: translateY(-2px);
+}
+
+.kids-btn--outline {
+  background: transparent;
+  border-color: var(--kids-rose);
+  color: var(--kids-rose);
+}
+
+.kids-btn--outline:hover {
+  background: var(--kids-rose);
+  color: var(--color-white);
+}
+
+.kids-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.kids-item {
+  background: var(--color-white);
+  border: 1px solid var(--kids-blush);
+  border-radius: var(--radius-lg);
+  padding: 30px 22px;
+  text-align: center;
+}
+
+.kids-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--kids-bg);
+  color: var(--kids-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kids-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.kids-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: .4em;
+}
+
+.kids-item p {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--color-ink-soft);
+}
+
+.kids-party {
+  background: var(--kids-bg);
+}
+
+.kids-party-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.kids-party h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+}
+
+.kids-party p {
+  color: var(--color-ink-soft);
+}
+
+.kids-checks {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+
+.kids-checks li {
+  position: relative;
+  padding: 6px 0 6px 30px;
+}
+
+.kids-checks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 16px;
+  height: 10px;
+  border-left: 2px solid var(--kids-rose);
+  border-bottom: 2px solid var(--kids-rose);
+  transform: rotate(-45deg);
+}
+
+.kids-steps {
+  display: grid;
+  gap: 18px;
+}
+
+.kids-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.kids-step > span {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--kids-rose);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kids-step h3 {
+  font-size: 1.1rem;
+  margin-bottom: .25em;
+}
+
+.kids-step p {
+  margin: 0;
+  font-size: .92rem;
+}
+
+.kids-cta {
+  text-align: center;
+  padding: 56px 32px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--kids-blush), var(--kids-lilac));
+}
+
+.kids-cta p {
+  max-width: 560px;
+  margin: 0 auto 26px;
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 991px) {
+  .kids-grid { grid-template-columns: repeat(2, 1fr); }
+  .kids-party-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+  .kids-hero { padding: 60px 0 64px; }
+  .kids-deco--1, .kids-deco--3 { top: 30px; }
+  .kids-cta { padding: 44px 20px; }
+}
+
+@media (max-width: 480px) {
+  .kids-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .kids-item { padding: 22px 14px; }
+}
+
+/* Aviso de spa infantil en otras páginas */
+
+.kids-teaser {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 28px;
+  align-items: center;
+  padding: 34px 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #f9dbe4, #f1e6f8);
+}
+
+.kids-teaser svg {
+  width: 64px;
+  height: 44px;
+  color: #e88aa6;
+}
+
+.kids-teaser h3 {
+  font-size: 1.6rem;
+  margin-bottom: .2em;
+}
+
+.kids-teaser p {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+.kids-teaser .kids-eyebrow {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .kids-teaser {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 32px 22px;
+    gap: 16px;
+  }
+
+  .kids-teaser svg {
+    margin: 0 auto;
+  }
+}
+
 /* ---------- Botón flotante de WhatsApp ---------- */
 
 .whatsapp-float {
@@ -1255,6 +1564,7 @@ ul {
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
+      <a href="spa-infantil.html">Spa infantil</a>
       <a href="nosotros.html" aria-current="page">Nosotros</a>
       <a href="contacto.html">Contacto</a>
     </nav>
@@ -1409,6 +1719,7 @@ ul {
           <li><a href="servicios.html#spa">Spa y masajes</a></li>
           <li><a href="servicios.html#depilacion">Depilación</a></li>
           <li><a href="servicios.html#peluqueria">Peluquería</a></li>
+          <li><a href="spa-infantil.html">Spa infantil</a></li>
         </ul>
       </div>
       <div>
