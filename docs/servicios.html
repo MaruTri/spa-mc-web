@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Servicios de Belleza en La Puebla de Cazalla | Spa MC</title>
-<meta name="description" content="Descubre los tratamientos de Spa MC en La Puebla de Cazalla: faciales, depilación, manicura, pedicura y keratina, con precios claros desde 7 €." />
+<meta name="description" content="Descubre los tratamientos de Spa MC en La Puebla de Cazalla: estética facial y corporal, spa, masajes, depilación y peluquería, con más de 70 tratamientos. Consulta precios por WhatsApp." />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Spa MC" />
 <link rel="canonical" href="https://marutri.github.io/spa-mc-web/servicios.html" />
 <link rel="icon" href="assets/logo.png" type="image/png" />
 
 <meta property="og:title" content="Servicios de Belleza | Spa MC" />
-<meta property="og:description" content="Faciales, depilación, manicura, pedicura y keratina en Spa MC, La Puebla de Cazalla. Precios claros, sin sorpresas." />
+<meta property="og:description" content="Estética facial y corporal, spa, masajes, depilación, manicura y peluquería en Spa MC, La Puebla de Cazalla." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://marutri.github.io/spa-mc-web/servicios.html" />
 <meta property="og:image" content="assets/hero-poster.jpg" />
@@ -20,7 +20,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Servicios de Belleza | Spa MC" />
-<meta name="twitter:description" content="Faciales, depilación, manicura, pedicura y keratina en Spa MC, La Puebla de Cazalla." />
+<meta name="twitter:description" content="Estética facial y corporal, spa, masajes, depilación, manicura y peluquería en Spa MC, La Puebla de Cazalla." />
 <meta name="twitter:image" content="assets/hero-poster.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1111,6 +1111,181 @@ ul {
   transform: translateY(0);
 }
 
+/* ---------- Catálogo de tratamientos ---------- */
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 44px;
+  max-width: 900px;
+}
+
+.category-nav a {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-ink-soft);
+  font-size: .88rem;
+  font-weight: 500;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.category-nav a:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 110px;
+}
+
+.category-card:hover {
+  transform: none;
+  box-shadow: var(--shadow-soft);
+}
+
+.category-media {
+  height: 210px;
+  overflow: hidden;
+}
+
+.category-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-body {
+  padding: 26px 28px 30px;
+}
+
+.category-body h3 {
+  font-size: 1.35rem;
+  margin-bottom: .35em;
+}
+
+.category-body > p {
+  color: var(--color-ink-soft);
+  font-size: .93rem;
+  margin-bottom: 16px;
+}
+
+.treatment-subhead {
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 18px 0 6px;
+}
+
+.treatment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.treatment-list li {
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.treatment-list li:last-child {
+  border-bottom: 0;
+}
+
+.treatment-list li,
+.treatment-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  font-size: .95rem;
+  color: var(--color-ink);
+}
+
+.treatment-list a {
+  width: 100%;
+  padding: 0;
+}
+
+.treatment-list a::after {
+  content: "Consultar";
+  flex-shrink: 0;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: .75;
+  transition: opacity .25s ease;
+}
+
+.treatment-list a:hover {
+  color: var(--color-primary-dark);
+}
+
+.treatment-list a:hover::after {
+  opacity: 1;
+}
+
+.category-note {
+  margin: 14px 0 0;
+  font-size: .88rem;
+  font-style: italic;
+  color: var(--color-ink-soft);
+}
+
+.category-cta {
+  margin-top: 22px;
+}
+
+.princess-band {
+  margin-top: 44px;
+  padding: 44px 32px;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  scroll-margin-top: 110px;
+}
+
+.princess-band h3 {
+  font-size: 1.8rem;
+}
+
+.princess-band p {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .category-body {
+    padding: 22px 20px 26px;
+  }
+
+  .princess-band {
+    padding: 34px 20px;
+  }
+}
+
 /* ---------- Botón flotante de WhatsApp ---------- */
 
 .whatsapp-float {
@@ -1279,66 +1454,202 @@ ul {
     <div class="container">
       <p class="breadcrumb"><a href="index.html">Inicio</a> / Servicios</p>
       <h1>Nuestros Servicios de Belleza</h1>
-      <p>Tratamientos de belleza con precio cerrado, en La Puebla de Cazalla.</p>
+      <p>Estética facial y corporal, spa, depilación y peluquería en La Puebla de Cazalla.</p>
     </div>
   </section>
 
   <section class="section" id="tratamientos-de-belleza">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Tratamientos de belleza</span>
-        <h2>Tanto si buscas una cera perfecta como si quieres mimarte con una manicura</h2>
-        <p>Cuenta con nosotros para tu tratamiento: una amplia gama de servicios de salón a precios claros, desde limpieza de cejas y depilación con cera hasta bronceado, manicura y pedicura.</p>
+        <span class="eyebrow">Catálogo de tratamientos</span>
+        <h2>Quiero, puedo, me lo merezco</h2>
+        <p>Desde un facial de mimo hasta un circuito de spa en pareja: estos son todos nuestros tratamientos. Pulsa en cualquiera y te contamos precio y disponibilidad por WhatsApp al momento.</p>
       </div>
 
-      <div class="grid grid--2">
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-12.jpg" alt="Colágeno facial - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Colágeno facial</h3><span class="price-tag">39,00 €</span></div>
-            <p>Tratamiento facial con colágeno pensado para aportar firmeza e hidratación profunda a la piel del rostro, dejándola con un aspecto más terso y luminoso.</p>
-          </div>
-        </div>
+      <nav class="category-nav" aria-label="Categorías de tratamientos">
+        <a href="#faciales">Faciales</a>
+        <a href="#aparatologia-facial">Aparatología facial</a>
+        <a href="#corporales">Corporales</a>
+        <a href="#spa">Spa y circuitos</a>
+        <a href="#masajes">Masajes</a>
+        <a href="#depilacion">Depilación</a>
+        <a href="#manos-pestanas">Manos, pies y pestañas</a>
+        <a href="#peluqueria">Peluquería</a>
+        <a href="#princesa">Princesa por un día</a>
+      </nav>
 
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-11.jpg" alt="Facial de vitamina C - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Facial de vitamina C</h3><span class="price-tag">39,00 €</span></div>
-            <p>Facial revitalizante con vitamina C que ayuda a unificar el tono de la piel y aportar luminosidad, ideal como impulso de energía para el rostro.</p>
-          </div>
-        </div>
+      <div class="catalog">
 
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-01.jpg" alt="Mesoterapia facial - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Mesoterapia facial</h3><span class="price-tag">50,00 €</span></div>
-            <p>Tratamiento facial especializado que nutre la piel en profundidad, indicado para quienes buscan un cuidado facial más intensivo.</p>
+        <article class="card category-card" id="faciales" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-12.jpg" alt="Tratamientos faciales en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Estética facial</h3>
+            <p>Tratamientos para cada tipo de piel, pensados para limpiar, nutrir y devolver la luz a tu rostro.</p>
+            <ul class="treatment-list">
+              <li>Higiene facial</li>
+              <li>Tratamiento hidratación</li>
+              <li>Tratamiento sensibilidad</li>
+              <li>Tratamiento vitamina C</li>
+              <li>Tratamiento colágeno</li>
+              <li>Tratamiento antiedad</li>
+              <li>Tratamiento oxigenante</li>
+              <li>Tratamiento acné</li>
+              <li>Oro o Perla (novias)</li>
+              <li>Renovación radical con ácido</li>
+              <li>La magia del tiempo (cromoterapia)</li>
+              <li>Cápsula del tiempo</li>
+              <li>Maderoterapia facial</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-09.jpg" alt="Depilación - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Depilación</h3><span class="price-tag">15,00 €</span></div>
-            <p>Depilación con cera realizada con mimo y cuidado, pensada para dejar la piel suave con resultados duraderos.</p>
+        <article class="card category-card" id="aparatologia-facial" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-01.jpg" alt="Tratamiento facial con aparatología en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Facial con aparatología</h3>
+            <p>Tecnología estética para resultados más intensos: firmeza, luminosidad y rejuvenecimiento.</p>
+            <ul class="treatment-list">
+              <li>Radiofrecuencia facial</li>
+              <li>Mesoterapia facial</li>
+              <li>Fotorejuvenecimiento</li>
+              <li>Máscara LED</li>
+              <li>Lifting japonés</li>
+              <li>Dermapen</li>
+            </ul>
+            <p class="category-note">Consulta nuestros bonos de sesiones.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-03.jpg" alt="Manicura - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Manicura</h3><span class="price-tag">7,00 €</span></div>
-            <p>Manicura completa para cuidar tus manos y uñas al detalle, con un acabado impecable.</p>
+        <article class="card category-card" id="corporales" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-10.jpg" alt="Estética corporal en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Estética corporal</h3>
+            <p>Aparatología y envolturas para moldear, reafirmar y cuidar tu cuerpo.</p>
+            <h4 class="treatment-subhead">Con aparatología</h4>
+            <ul class="treatment-list">
+              <li>Thermo Escul (adelgazante)</li>
+              <li>Dermajet (ultrasonidos)</li>
+              <li>Radiofrecuencia corporal</li>
+              <li>Cavitación</li>
+              <li>Mesoterapia corporal</li>
+              <li>Presoterapia</li>
+              <li>Plataforma vibratoria</li>
+              <li>Maderoterapia corporal</li>
+            </ul>
+            <h4 class="treatment-subhead">Envolturas</h4>
+            <ul class="treatment-list">
+              <li>Envoltura anticelulítica</li>
+              <li>Envoltura reafirmante</li>
+              <li>Envoltura drenante</li>
+              <li>Envoltura antiestrías</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="card service-card" data-reveal>
-          <div class="card-media"><img src="assets/gallery/photo-02.jpg" alt="Keratina, tratamiento capilar - Spa MC" loading="lazy" /></div>
-          <div class="card-body">
-            <div class="card-top-row"><h3>Keratina Tratamiento Capilar</h3><span class="price-tag">30,00 €</span></div>
-            <p>Tratamiento capilar de keratina que deja el cabello más liso, brillante y manejable, reduciendo el encrespamiento.</p>
+        <article class="card category-card" id="spa" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-05.jpg" alt="Jacuzzi y circuitos de spa en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Spa y circuitos</h3>
+            <p>Desconecta en nuestros circuitos de agua, solo, en pareja o con tu grupo.</p>
+            <ul class="treatment-list">
+              <li>Circuito Thermal</li>
+              <li>Circuito Thermal para grupos (desde 4 personas)</li>
+              <li>Circuito en pareja (champagne y bombones)</li>
+              <li>Circuito árabe</li>
+              <li>Circuito a la naranja</li>
+              <li>Indosean (recorrido de bienestar por los 4 continentes)</li>
+              <li>Indosean + jacuzzi</li>
+              <li>Envolturas de fango, champagne, naranja, perla, oro y vino tinto</li>
+            </ul>
           </div>
-        </div>
+        </article>
+
+        <article class="card category-card" id="masajes" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-04.jpg" alt="Masaje con piedras calientes en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Masajes y rituales</h3>
+            <p>Masajes para soltar tensiones y rituales con ducha Vichy para salir como nueva.</p>
+            <ul class="treatment-list">
+              <li>Masaje relajante con aromaterapia</li>
+              <li>Masaje con jabones aromáticos y ducha Vichy</li>
+              <li>Masaje con velas calientes</li>
+              <li>Masaje piernas ligeras futura mamá</li>
+              <li>Terapia geotermal (piedras frías y calientes)</li>
+              <li>Hidratación y exfoliante con ducha Vichy</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card category-card" id="depilacion" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-09.jpg" alt="Depilación en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Depilación</h3>
+            <p>Piel suave con el método que mejor va contigo, con resultados duraderos.</p>
+            <ul class="treatment-list">
+              <li>Depilación láser sin dolor</li>
+              <li>Depilación IPL</li>
+              <li>Cera fría y caliente</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card category-card" id="manos-pestanas" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-03.jpg" alt="Manicura y pedicura en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Manos, pies, pestañas y maquillaje</h3>
+            <p>Los detalles que marcan la diferencia, cuidados al milímetro.</p>
+            <ul class="treatment-list">
+              <li>Manicura</li>
+              <li>Manicura de luxe</li>
+              <li>Esmaltado permanente</li>
+              <li>Pedicura de luxe</li>
+              <li>Tratamiento de manos y pies con parafina</li>
+              <li>Tinte y moldeador de pestañas</li>
+              <li>Lifting de pestañas coreano</li>
+              <li>Maquillaje social, novias y madrinas</li>
+              <li>Rayos UVA</li>
+              <li>Cremas personalizadas</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card category-card" id="peluqueria" data-reveal>
+          <div class="category-media"><img src="assets/gallery/photo-02.jpg" alt="Peluquería unisex en Spa MC" loading="lazy" /></div>
+          <div class="category-body">
+            <h3>Peluquería unisex</h3>
+            <p>Tratamientos capilares con peinado incluido y todos los servicios de peluquería.</p>
+            <h4 class="treatment-subhead">Tratamientos + peinado</h4>
+            <ul class="treatment-list">
+              <li>Botox capilar</li>
+              <li>Keratina</li>
+              <li>Hidratación capilar</li>
+              <li>Volumen</li>
+              <li>Proteínas de seda</li>
+              <li>Proteínas de seda + botox</li>
+              <li>Plex</li>
+              <li>Tratamiento vegano</li>
+              <li>Tratamiento ácido</li>
+            </ul>
+            <h4 class="treatment-subhead">Servicios</h4>
+            <ul class="treatment-list">
+              <li>Moldeador</li>
+              <li>Corte</li>
+              <li>Color</li>
+              <li>Mechas</li>
+              <li>Recogidos</li>
+              <li>Pack novias</li>
+              <li>Niñas de comunión</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="princess-band" id="princesa" data-reveal>
+        <span class="eyebrow">De 5 a 12 años</span>
+        <h3>Princesa por un día</h3>
+        <p>Una experiencia de spa pensada para las más pequeñas: jacuzzi, masaje con chorro, masaje relajante, maquillaje, peinado, esmaltado de uñas, vestuario de princesa, zumo y chuches.</p>
+        <a class="btn btn--primary" href="https://wa.me/34667084509?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20el%20precio%20de%3A%20Princesa%20por%20un%20d%C3%ADa" target="_blank" rel="noopener noreferrer">Consultar precio por WhatsApp</a>
       </div>
     </div>
   </section>
@@ -1382,7 +1693,7 @@ ul {
           <img src="assets/logo.png" alt="Spa MC - Logo" />
           <strong>Spa MC</strong>
         </div>
-        <p>Salón de belleza en La Puebla de Cazalla. Faciales, depilación, manicura, pedicura y keratina en un ambiente de relax.</p>
+        <p>Salón de belleza y spa en La Puebla de Cazalla. Estética facial y corporal, spa, masajes, depilación, manicura y peluquería en un ambiente de relax.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/pueblaspa" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram de Spa MC">
             <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
@@ -1404,10 +1715,11 @@ ul {
       <div>
         <h4>Servicios</h4>
         <ul>
-          <li><a href="servicios.html">Faciales</a></li>
-          <li><a href="servicios.html">Depilación</a></li>
-          <li><a href="servicios.html">Manicura</a></li>
-          <li><a href="servicios.html">Keratina</a></li>
+          <li><a href="servicios.html#faciales">Faciales</a></li>
+          <li><a href="servicios.html#corporales">Corporales</a></li>
+          <li><a href="servicios.html#spa">Spa y masajes</a></li>
+          <li><a href="servicios.html#depilacion">Depilación</a></li>
+          <li><a href="servicios.html#peluqueria">Peluquería</a></li>
         </ul>
       </div>
       <div>
@@ -1456,6 +1768,28 @@ ul {
         });
       });
     }
+
+    var waBase = "https://wa.me/34667084509?text=";
+    document.querySelectorAll(".treatment-list li").forEach(function (li) {
+      var name = li.textContent.trim();
+      var a = document.createElement("a");
+      a.href = waBase + encodeURIComponent("Hola, me gustaría saber el precio de: " + name);
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = name;
+      li.textContent = "";
+      li.appendChild(a);
+    });
+    document.querySelectorAll(".category-card").forEach(function (card) {
+      var title = card.querySelector("h3").textContent.trim();
+      var cta = document.createElement("a");
+      cta.className = "btn btn--outline category-cta";
+      cta.href = waBase + encodeURIComponent("Hola, me gustaría información y precios de: " + title);
+      cta.target = "_blank";
+      cta.rel = "noopener noreferrer";
+      cta.textContent = "Consultar precios por WhatsApp";
+      card.querySelector(".category-body").appendChild(cta);
+    });
 
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
